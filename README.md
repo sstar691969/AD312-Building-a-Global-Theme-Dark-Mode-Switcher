@@ -1,156 +1,16 @@
-# AD312-Building-a-Global-Theme-Dark-Mode-Switcher
-Define two theme objects (e.g., light with a white background and black text, and dark with a dark gray background and white text).
+# React + Vite
 
-William Anderson
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-AD312
+Currently, two official plugins are available:
 
-# 🌗 Global Theme Switcher (React Context API)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 📌 Overview
+## React Compiler
 
-This project is a simple React application that demonstrates how to use the **React Context API** to implement a global **Light/Dark theme switcher**.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Instead of passing props through multiple components, the theme state is managed globally using Context, allowing any component to access and update the theme easily.
+## Expanding the ESLint configuration
 
----
-
-## 🎯 Features
-
-- Light / Dark mode toggle
-- Global state management using Context API
-- useContext hook for consuming theme data
-- Dynamic styling based on theme
-- Test cases (Normal + Edge cases)
-- PASS / FAIL indicators for testing output
-
----
-
-## 🛠️ Tech Stack
-
-- React (Vite)
-- JavaScript (ES6+)
-- CSS
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── App.jsx
-├── App.css
-├── main.jsx
-├── ThemeContext.jsx
-├── testCases.js
-└── components/
-    └── ThemeSwitcher.jsx
-```
-
----
-
-How It Works
-
-1. Theme Context
-A global context is created using `createContext()` to store:
-
-- Current theme (`light` or `dark`)
-- Toggle function to switch themes
-- Theme styles (background + text color)
-
----
-
-2. Provider
-`ThemeProvider` wraps the entire app in `main.jsx`, making theme data available globally.
-
----
-
-3. Theme Switching
-The `ThemeSwitcher` component:
-- Reads current theme using `useContext`
-- Toggles theme on button click
-- Updates UI dynamically
-
----
-
-4. Dynamic Styling
-The app applies styles based on the current theme:
-
-- Light Mode → white background, black text  
-- Dark Mode → dark background, white text  
-
----
-
-Test Cases
-
-The application includes both **normal** and **edge** test cases.
-
----
-
-Normal Test Cases
-
-- Theme loads in Light Mode
-- Dark Mode toggles successfully
-- ThemeSwitcher button renders correctly
-
----
-
-Edge Test Cases
-
-- Null value handling
-- Undefined value handling
-- Empty string handling
-
----
-
-PASS / FAIL System
-
-Each test case returns:
-
-- ✔ PASS → Test executed successfully
-- ❌ FAIL → Test failed
-
-This is displayed visually in the UI for demonstration purposes.
-
----
-
-How to Run the Project
-
-1. Install dependencies
-
-npm install
-
-
-2. Start development server
-
-npm run dev
-
-
-3. Open in browser
-
-http://localhost:5174
-
-
----
-
-What to Show in Video Submission
-
-- Explain React Context API
-- Show ThemeProvider setup
-- Demonstrate useContext usage
-- Toggle Light/Dark mode
-- Show UI updates
-- Display test cases (Normal + Edge)
-- Explain PASS/FAIL results
-
----
-
-Key Learning Outcome
-
-This project demonstrates how React Context API helps eliminate prop drilling and enables efficient global state management in a scalable way.
-
----
-
-Author: William Anderson
-
-Student Project – React Context API Assignment
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
